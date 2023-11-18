@@ -93,13 +93,15 @@ const player = new Player({x: 0,y: 0})
 // početno crtanje igrača
 player.draw()
 
+// na početku igre stvara se 10 asteroida
 for (var i = 0; i < 10; i++) {
     createNewAsteroid()
 }
 
+// svakih 250ms stvara se novi asteroid
 const intervalId = window.setInterval(() => {
     createNewAsteroid()
-}, 150)
+}, 250)
 
 function createNewAsteroid() {
     const side = Math.floor(Math.random() * 4) //random strana na kojoj ce se stvoriti asteroid
